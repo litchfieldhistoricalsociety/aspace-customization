@@ -1,0 +1,9 @@
+en:
+  brand:
+    title: Litchfield Historical Society ArchivesSpace
+    welcome_head: Welcome to the Litchfield Historical Society Archives
+    welcome_message: |
+      <p>Search across our collections, digital materials, and more.</p>
+    welcome_page_title: Litchfield Historical Society
+  footer:
+    archivesspace_home: Visit <a href='https://www.litchfieldhistoricalsociety.org/'>LHS home</a>

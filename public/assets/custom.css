@@ -1,0 +1,13 @@
+#header {
+    background-color: #f3f0e9;
+    color: #51758B;
+}
+
+#header h1 {
+    font-size: 1.75rem;
+}
+
+#header>.row {
+    border-bottom: none;
+    height: 5rem;
+}
