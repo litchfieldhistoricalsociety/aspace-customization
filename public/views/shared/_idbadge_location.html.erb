@@ -1,0 +1,20 @@
+<%# Show Top Container and Location tags %>
+<% 
+    topcontainer_info = "NO TOP CONTAINER FOUND"
+    if resolved_top_container
+        topcontainer_info = resolved_top_container.dig("display_string") || "NO TOP CONTAINER FOUND"
+    end
+
+    # TODO: make this more robust; loop through each container_location and pull out active instance
+    location_info = "NO LOCATION FOUND"
+    if resolved_top_container
+        location_info = resolved_top_container.dig("container_locations", 0, "_resolved", "title") || "NO LOCATION FOUND"
+    end
+%>
+<div class="badge-and-identifier">
+    <div class="record-type-badge top-container"><i class="fa fa-suitcase"></i> Top Container: <%= topcontainer_info %></div>
+</div>
+
+<div class="badge-and-identifier">
+    <div class="record-type-badge location"><i class="fa fa-th"></i> Location: <%= location_info %></div>
+</div>

@@ -1,6 +1,6 @@
 <%#
-  # most recent file version: v3.1.1
-  # https://github.com/archivesspace/archivesspace/blob/v3.1.1/public/app/views/shared/_idbadge.html.erb
+  # most recent file version: v3.4.1
+  # https://github.com/archivesspace/archivesspace/blob/v3.4.1/public/app/views/shared/_idbadge.html.erb
 %>
 
 <%
@@ -68,3 +68,11 @@ end
     </div>
   <% end %>
 </div>
+
+<%#= debug result.primary_type %>
+
+<%# BEGIN LHS EDIT - Display Top Container and Location information %>
+<% if ["resource", "archival_object"].include? result.primary_type %>
+    <%= render partial: 'shared/idbadge_location', locals: {:resolved_top_container => result.resolved_top_container} %>
+<% end %>
+<%# END LHS EDIT %>
